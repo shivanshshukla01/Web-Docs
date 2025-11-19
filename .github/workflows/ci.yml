@@ -29,4 +29,4 @@ jobs:
           # The path to your mkdocs.yml file if it's not in the root
           CONFIG_FILE: mkdocs.yml
           # Set this if you use requirements.txt for plugins/themes
-          REQUIREMENTS: requirements.txt
+          REQUIREMENTS: pip install mkdocs-material
