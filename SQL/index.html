@@ -1,0 +1,1715 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://shivanshshukla01.github.io/Web-Docs/SQL/">
+      
+      
+        <link rel="prev" href="../Python/">
+      
+      
+        <link rel="next" href="../Seaborn/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>SQL - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#select" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SQL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome to MkDocs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Pandas/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Pandas
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Python/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Python
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  SQL
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Seaborn/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Seaborn
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pandas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pandas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Select
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Select">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-and-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtering and Sorting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filtering and Sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-ifthen-logic-in-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CASE - if/then logic in SQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-table-queries-joins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi Table Queries - JOINS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi Table Queries - JOINS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inner-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inner Join
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outer-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outer Join
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UNIONs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NULL values
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-of-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Order of Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-cleaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Cleaning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Cleaning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cte-common-table-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CTE (Common Table Expression)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-datatime-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current Data/Time Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inserting-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inserting Rows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updating Rows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deleting Rows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Tables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table Data Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table Constraints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#altering-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Altering Tables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dropping-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dropping Tables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        END
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bigquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BigQuery
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BigQuery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Seaborn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seaborn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#select" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Select
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Select">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-and-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtering and Sorting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filtering and Sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-ifthen-logic-in-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CASE - if/then logic in SQL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-table-queries-joins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi Table Queries - JOINS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi Table Queries - JOINS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inner-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inner Join
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outer-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outer Join
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UNIONs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NULL values
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-of-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Order of Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-cleaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Cleaning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Cleaning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cte-common-table-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CTE (Common Table Expression)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-datatime-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current Data/Time Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inserting-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inserting Rows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updating Rows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deleting Rows
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Tables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table Data Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table Constraints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#altering-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Altering Tables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dropping-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dropping Tables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        END
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bigquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BigQuery
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BigQuery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Queries
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>SQL</h1>
+
+<ul>
+<li>columns - also known as attributes/properties</li>
+<li>table - also known as schema</li>
+</ul>
+<h2 id="select">Select<a class="headerlink" href="#select" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">col1</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="p">,</span><span class="w"> </span><span class="n">col3</span><span class="p">,</span><span class="w"> </span><span class="p">..</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+
+<span class="c1">-- to select all</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+
+<span class="c1">-- conditionals</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">col1</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span>
+<span class="k">AND</span><span class="w"> </span><span class="n">condition</span>
+<span class="k">OR</span><span class="w"> </span><span class="n">condition</span>
+<span class="k">BETWEEN</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">y</span>
+<span class="k">NOT</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">b</span>
+<span class="n">col</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
+<span class="n">col</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;j&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;k&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;l&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+
+<span class="c1">-- specific conditionals </span>
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;something&#39;</span><span class="w"> </span><span class="c1">-- case-sensitive equality</span>
+<span class="n">col</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;something&#39;</span><span class="w"> </span><span class="c1">-- case-sensitive equality</span>
+<span class="n">col</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;something&#39;</span><span class="w"> </span><span class="c1">-- pattern matching or case-insensitive equality</span>
+<span class="c1">-- ILIKE is used for case-insensitive where LIKE is case-sensitive</span>
+<span class="n">col</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;something&#39;</span><span class="w"> </span><span class="c1">-- pattern matching inequality </span>
+<span class="c1">-- wildcards are % - means any num of character and _ means only one character</span>
+<span class="n">col</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%some%&#39;</span><span class="w"> </span><span class="c1">-- any word with some in between</span>
+<span class="c1">-- handsomeness</span>
+<span class="n">col</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;some%&#39;</span><span class="w"> </span><span class="c1">-- start with some and end with anything</span>
+<span class="c1">-- someplace</span>
+<span class="n">col</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;an_&#39;</span><span class="w"> </span><span class="c1">-- start with any single letter and then some</span>
+<span class="c1">-- and, ant</span>
+</code></pre></div>
+full text search ? - Apache Lucene or Sphinx - dedicated external for long full text search</p>
+<h3 id="filtering-and-sorting">Filtering and Sorting<a class="headerlink" href="#filtering-and-sorting" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="c1">-- discard rows that have duplicate values blindly</span>
+<span class="c1">-- can use multiple cols as well like this -&gt; DISTINCT col, col2, col3</span>
+<span class="c1">-- DISTINCT will be used on all of them</span>
+<span class="c1">-- can also be used within aggregates COUNT(DISTINCT col)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<span class="c1">-- grouping/GROUP BY is used for removing duplication on criteria</span>
+
+<span class="k">SELECT</span><span class="w"> </span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="w"> </span><span class="c1">--no necessary</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="k">ASC</span><span class="w"> </span><span class="c1">-- or DESC</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="c1">-- reduce the number of rows to return</span>
+<span class="k">OFFSET</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="c1">-- how many rows to skip - OPTIONAL</span>
+<span class="c1">-- LIMIT and OFFSET are majorly used/written at the end of the statement/query</span>
+
+<span class="c1">-- when comparing date and time with the timestamp or date data, this is a better way</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">timestamp_data</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="s1">&#39;date&#39;</span><span class="w"> </span><span class="c1">-- &#39;2010-01-01&#39;</span>
+</code></pre></div>
+<h4 id="case-ifthen-logic-in-sql">CASE - if/then logic in SQL<a class="headerlink" href="#case-ifthen-logic-in-sql" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="p">,</span><span class="w"> </span><span class="n">col3</span>
+<span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;value&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;value_2&#39;</span>
+<span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="n">col2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;value2&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;val2&#39;</span><span class="w"> </span><span class="c1">-- multiple conditions can be used as well</span>
+<span class="k">ELSE</span><span class="w"> </span><span class="k">NULL</span><span class="o">/</span><span class="s1">&#39;Value&#39;</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+</code></pre></div>
+<strong><em><u>IRL example</u></em></strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">player_name</span><span class="p">,</span>
+<span class="w">       </span><span class="k">year</span><span class="p">,</span>
+<span class="w">       </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="k">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;SR&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;yes&#39;</span>
+<span class="w">            </span><span class="k">ELSE</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">is_a_senior</span>
+<span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">benn</span><span class="p">.</span><span class="n">college_football_players</span>
+
+<span class="c1">-- CAN also use multiple statements</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">player_name</span><span class="p">,</span>
+<span class="w">       </span><span class="n">weight</span><span class="p">,</span>
+<span class="w">       </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">250</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;over 250&#39;</span>
+<span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">250</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;201-250&#39;</span>
+<span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">175</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;176-200&#39;</span>
+<span class="w">            </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">&#39;175 or under&#39;</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">weight_group</span>
+<span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">benn</span><span class="p">.</span><span class="n">college_football_players</span>
+
+<span class="c1">-- CAN also be used with aggregate functions</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="k">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;FR&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;FR&#39;</span>
+<span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="k">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;SO&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;SO&#39;</span>
+<span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="k">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;JR&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;JR&#39;</span>
+<span class="w">            </span><span class="k">WHEN</span><span class="w"> </span><span class="k">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;SR&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;SR&#39;</span>
+<span class="w">            </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">&#39;No Year Data&#39;</span><span class="w"> </span><span class="k">END</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">year_group</span><span class="p">,</span>
+<span class="w">            </span><span class="k">COUNT</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">count</span>
+<span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">benn</span><span class="p">.</span><span class="n">college_football_players</span>
+<span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">year_group</span>
+</code></pre></div></p>
+<h3 id="multi-table-queries-joins">Multi Table Queries - JOINS<a class="headerlink" href="#multi-table-queries-joins" title="Permanent link">&para;</a></h3>
+<ul>
+<li>primary key is needed - uniquely identifies the entity throughout the database</li>
+<li>JOIN - combines data - from two table - based on primary/unique key</li>
+</ul>
+<h5 id="inner-join">Inner Join<a class="headerlink" href="#inner-join" title="Permanent link">&para;</a></h5>
+<p>matches rows of first table with second table - based on same key - result is big table with combined cols of both tables
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">another_table</span><span class="w"> </span><span class="c1">-- can also use only JOIN but this enchances the readability</span>
+<span class="k">ON</span><span class="w"> </span><span class="k">table_name</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">another_table</span><span class="p">.</span><span class="n">matching_id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</code></pre></div></p>
+<h5 id="outer-join">Outer Join<a class="headerlink" href="#outer-join" title="Permanent link">&para;</a></h5>
+<p>Asymmetric data - use LEFT, RIGHT or FULL JOIN, (OUTER can be omitted)
+<u>Left Join:</u> returns all rows of left table A whether is match is found in right table B or not
+- The table with more DISTINCT rows should be considered as A, hence used with FROM
+- The table whose row you want to preserve should be considered as A or left table
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">col1</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="p">,</span><span class="w"> </span><span class="n">col3</span><span class="p">,</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">table_1</span><span class="w"> </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">table_2</span><span class="w"> </span>
+<span class="c1">--                       table on left side    table on right side</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">table_1</span><span class="p">.</span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">table_2</span><span class="p">.</span><span class="n">col</span>
+<span class="c1">--    left         right</span>
+</code></pre></div>
+<u>Right Join:</u> same as above but reversed, include rows of right table regardless of match found in left table
+<u>Full Join:</u> rows for both tables are kept, regardless of matching row exist or not
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<span class="k">LEFT</span><span class="o">/</span><span class="k">RIGHT</span><span class="o">/</span><span class="k">FULL</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">another_table</span>
+<span class="k">ON</span><span class="w"> </span><span class="k">table_name</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">another_table</span><span class="p">.</span><span class="n">matching_id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">conditions</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</code></pre></div></p>
+<h5 id="unions">UNIONs<a class="headerlink" href="#unions" title="Permanent link">&para;</a></h5>
+<h5 id="null-values">NULL values<a class="headerlink" href="#null-values" title="Permanent link">&para;</a></h5>
+<ul>
+<li>good to reduce them as much as possible</li>
+<li>special attention as functions behave differently with NULL</li>
+<li>instead of NULL, use data-type appropriate value <ul>
+<li>0 for numerical data</li>
+<li>"" for string</li>
+</ul>
+</li>
+<li>NULL however can be used to store incomplete data<ul>
+<li>average of numerical data
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span>
+<span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="k">IS</span><span class="o">/</span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span>
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h3 id="expressions">Expressions<a class="headerlink" href="#expressions" title="Permanent link">&para;</a></h3>
+<p><strong>Simple</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">col</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">half_col</span>
+<span class="c1">--  expression    description</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">very_long_table_name</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">short_name</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">mini_table</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">short_name</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mini_table</span><span class="p">.</span><span class="n">matching_id</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+<span class="c1">-- every database has its own mathematical, string and data functions, present in their docs</span>
+</code></pre></div></p>
+<p><strong>Aggregates</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">agg_func</span><span class="p">(</span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">new_name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<span class="c1">-- if new_name contains spaces, use &quot;new name&quot; - double quotes</span>
+<span class="c1">-- this is the only place in sql where double quotes are used</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="c1">-- group the rows that have same value in the col specified</span>
+<span class="k">HAVING</span><span class="w"> </span><span class="n">group_condition</span><span class="w"> </span><span class="c1">-- conditions that are applied on grouped data</span>
+<span class="c1">-- HAVING is not needed if GROUP BY is not being used</span>
+
+<span class="cm">/*</span>
+<span class="cm">COUNT(*)   -- count all rows</span>
+<span class="cm">COUNT(col) -- count non-NULL values in cols</span>
+<span class="cm">-- can also use numbers as the position of the col in the select statement</span>
+<span class="cm">MIN(col) -- will return smallest number, earlier date and string closest to &#39;A&#39;</span>
+<span class="cm">MAX()</span>
+<span class="cm">AVG()</span>
+<span class="cm">SUM()</span>
+<span class="cm">*/</span>
+</code></pre></div></p>
+<h3 id="order-of-execution">Order of Execution<a class="headerlink" href="#order-of-execution" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="o">|</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="c1">-- to determine the total working set</span>
+<span class="o">|</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="c1">-- all rows and cols are passed to apply the conditions </span>
+<span class="o">|</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="c1">-- to group on the basis of common data</span>
+<span class="o">|</span><span class="w"> </span><span class="k">HAVING</span><span class="w"> </span><span class="c1">-- if group by exist</span>
+<span class="o">|</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="c1">-- select the part that is needed to be displayed</span>
+<span class="o">|</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="c1">-- among the chosen column, remove the duplicates</span>
+<span class="o">|</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="c1">-- rows are now sorted</span>
+<span class="o">|</span><span class="w"> </span><span class="k">LIMIT</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="k">OFFSET</span><span class="w"> </span><span class="c1">-- how much to display and from where to display</span>
+<span class="err">↓</span>
+</code></pre></div>
+<h2 id="data-types">Data Types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h2>
+<p>List of the all the <a href="https://www.w3schools.com/sql/sql_datatypes.asp">data types</a> in SQL.
+- Data should be stored as optimal data type from the beginning, but if it is not, you can change it via query.
+- It is common for dates or numbers to be stored as strong which will be problematic when using some functions.
+- You can use <code>CAST(col AS data_type)</code> or <code>col::data_type</code></p>
+<h2 id="data-cleaning">Data Cleaning<a class="headerlink" href="#data-cleaning" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">LEFT</span><span class="p">(</span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="c1">-- get the num amount of characters from the left side of the data of col</span>
+<span class="k">RIGHT</span><span class="p">(</span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="c1">-- same as above but for the right</span>
+<span class="n">SUBSTR</span><span class="p">(</span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="n">steps</span><span class="p">)</span><span class="w"> </span><span class="c1">-- create a sub string like above but from middle</span>
+<span class="k">LENGTH</span><span class="p">(</span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="c1">-- length of the strings in the col</span>
+<span class="k">TRIM</span><span class="p">(</span><span class="s1">&#39;chars&#39;</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">-- remove the chars from the beginning and end of the string</span>
+<span class="k">POSITION</span><span class="p">(</span><span class="s1">&#39;char/substring&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">-- index of the first occurrence</span>
+<span class="c1">-- OR</span>
+<span class="n">STRPOS</span><span class="p">(</span><span class="s1">&#39;string&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;char/substring&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">-- both are case sensitive</span>
+<span class="n">CONCAT</span><span class="p">(</span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">)</span><span class="w"> </span><span class="c1">-- nothing much to explain here</span>
+<span class="k">UPPER</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
+<span class="k">LOWER</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
+<span class="k">EXTRACT</span><span class="p">(</span><span class="s1">&#39;val&#39;</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">date_format</span><span class="p">)</span><span class="w"> </span><span class="c1">-- extracting from the parts of the date</span>
+<span class="n">DATE_TRUNC</span><span class="p">(</span><span class="s1">&#39;va&#39;</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">date_format</span><span class="p">)</span><span class="w"> </span><span class="c1">-- round off the date upto a specific val</span>
+<span class="cm">/*</span>
+<span class="cm">THE AVAILABLE vals are</span>
+<span class="cm">year, month, day, hour, minute, second, decade, dow</span>
+<span class="cm">-- dow means day of the week </span>
+<span class="cm">*/</span>
+<span class="k">COALESCE</span><span class="p">(</span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;string&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">-- replace the null values with string</span>
+</code></pre></div>
+<h5 id="cte-common-table-expression">CTE (Common Table Expression)<a class="headerlink" href="#cte-common-table-expression" title="Permanent link">&para;</a></h5>
+<p>CTE - temporary table returned within a query, helps in splitting queries into readable chunks
+<div class="highlight"><pre><span></span><code><span class="k">WITH</span><span class="w"> </span><span class="n">temp_table_name</span><span class="w"> </span><span class="k">AS</span>
+<span class="p">(</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">col</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span>
+<span class="p">)</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">col2</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">temp_table_name</span>
+</code></pre></div></p>
+<h5 id="current-datatime-methods">Current Data/Time Methods<a class="headerlink" href="#current-datatime-methods" title="Permanent link">&para;</a></h5>
+<p><div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">CURRENT_DATE</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">date</span><span class="p">,</span>
+<span class="w">       </span><span class="k">CURRENT_TIME</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">time</span><span class="p">,</span>
+<span class="w">       </span><span class="k">CURRENT_TIMESTAMP</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">timestamp</span><span class="p">,</span>
+<span class="w">       </span><span class="k">LOCALTIME</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">localtime</span><span class="p">,</span>
+<span class="w">       </span><span class="k">LOCALTIMESTAMP</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">localtimestamp</span><span class="p">,</span>
+<span class="w">       </span><span class="n">NOW</span><span class="p">()</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">now</span>
+
+<span class="c1">-- FOR THE TIMEZONE STUFF</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">CURRENT_TIME</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">time</span><span class="p">,</span>
+<span class="w">       </span><span class="k">CURRENT_TIME</span><span class="w"> </span><span class="k">AT</span><span class="w"> </span><span class="k">TIME</span><span class="w"> </span><span class="k">ZONE</span><span class="w"> </span><span class="s1">&#39;PST&#39;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">time_pst</span>
+</code></pre></div>
+<a href="https://www.postgresql.org/docs/7.2/timezones.html">List of time zones</a></p>
+<h2 id="inserting-rows">Inserting Rows<a class="headerlink" href="#inserting-rows" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Schema - description of each table and data type of each col of the table
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">table_name</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">val1</span><span class="p">,</span><span class="w"> </span><span class="n">val2</span><span class="p">,</span><span class="w"> </span><span class="n">val3</span><span class="p">)</span><span class="w"> </span><span class="c1">-- as the cols are not specified, you must include values of all cols</span>
+
+
+<span class="c1">-- IF THE DATA IS NOT COMPLETE</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="p">(</span><span class="n">col_name</span><span class="p">,</span><span class="w"> </span><span class="n">col2</span><span class="p">,</span><span class="w"> </span><span class="n">col3</span><span class="p">,</span><span class="w"> </span><span class="n">col4</span><span class="p">)</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">val1</span><span class="p">,</span><span class="w"> </span><span class="n">val2</span><span class="p">,</span><span class="w"> </span><span class="n">val3</span><span class="p">,</span><span class="w"> </span><span class="n">val4</span><span class="p">)</span><span class="w"> </span><span class="c1">-- this will be inserted in sequence to the above cols sequence</span>
+<span class="c1">-- col that is not mentioned here will be filled with default value(if not set)</span>
+<span class="c1">-- instead of values, you can also use expression to be inserted such as (2.4, 1000/500)</span>
+</code></pre></div></li>
+</ul>
+<h2 id="updating-rows">Updating Rows<a class="headerlink" href="#updating-rows" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="k">table_name</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value_or_expression</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">col2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">val2</span><span class="p">,</span>
+<span class="w">    </span><span class="n">col3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">val3</span><span class="p">,</span><span class="w"> </span><span class="n">etc</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">conditions</span>
+
+<span class="c1">-- be extra careful setting the values</span>
+<span class="c1">-- check the proper cols and conditional statement</span>
+
+<span class="p">:</span><span class="n">TIP</span>
+<span class="c1">-- first check the conditional query using SELECT whether you are updating the correct rows or not and then proceed to updation</span>
+</code></pre></div>
+<h2 id="deleting-rows">Deleting Rows<a class="headerlink" href="#deleting-rows" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="w"> </span><span class="c1">-- if this is omitted, all rows are removed however quick way to clear the table if wants to </span>
+
+<span class="p">:</span><span class="n">TIP</span>
+<span class="c1">-- run SELECT first to check the conditional</span>
+<span class="c1">-- read DELETE statement twice </span>
+</code></pre></div>
+<h2 id="creating-tables">Creating Tables<a class="headerlink" href="#creating-tables" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="k">table_name</span><span class="p">(</span>
+<span class="n">col1_name</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="n">TableConstraint</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">default_value</span><span class="p">,</span>
+<span class="n">col2_name</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="n">TableConstraint</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">defauly_vaue</span>
+<span class="p">)</span>
+<span class="c1">-- TableConstraint is applied on the value inserted into the col</span>
+</code></pre></div>
+<h5 id="table-data-types">Table Data Types<a class="headerlink" href="#table-data-types" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Integer</td>
+<td>Whole integer values</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>int value of just 0 and 1</td>
+</tr>
+<tr>
+<td>Float, Double, Real</td>
+<td>Store more precise numerical data;<br>Different types is used as per the precision required</td>
+</tr>
+<tr>
+<td>Char(Character),<br>Varchar, Text</td>
+<td>text based data types; the difference lies into the efficiency of database when working with them<br>CHAR(n) - fixed size, less will be filled with padding<br>VARCHAR(n) - variable but max is n number of chars<br>TEXT - unlimited</td>
+</tr>
+<tr>
+<td>DATE, DATETIME</td>
+<td>no explanation needed</td>
+</tr>
+<tr>
+<td>BLOB</td>
+<td>Binary data, must store with right metadata for requery</td>
+</tr>
+</tbody>
+</table>
+<h5 id="table-constraints">Table Constraints<a class="headerlink" href="#table-constraints" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>CONSTRAINTS</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRIMARY KEY</td>
+<td>unique and each row can be identified with</td>
+</tr>
+<tr>
+<td>AUTOINCREMENT</td>
+<td>automatically filled and incremented with each row integrat</td>
+</tr>
+<tr>
+<td>UNIQUE</td>
+<td>cannot have duplic</td>
+</tr>
+<tr>
+<td>NOT NULL</td>
+<td>cannot be NULL or</td>
+</tr>
+<tr>
+<td>CHECK(exp)</td>
+<td>check whether the value inserted is valid o</td>
+</tr>
+<tr>
+<td>FOREIGN  Consistency check means each value in the col ensures it corresponds to another value in another col in another table nother</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="altering-tables">Altering Tables<a class="headerlink" href="#altering-tables" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">table_name</span>
+<span class="k">ADD</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="n">datatype</span><span class="w"> </span><span class="k">constraints</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="c1">-- to add a column</span>
+<span class="k">DROP</span><span class="w"> </span><span class="n">col</span><span class="w">                                 </span><span class="c1">-- the col to be deleted</span>
+<span class="k">RENAME</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">new_table_name</span><span class="w">                 </span><span class="c1">-- new table name</span>
+</code></pre></div>
+<p>All databases support slightly different methods so use docs for it.</p>
+<h2 id="dropping-tables">Dropping Tables<a class="headerlink" href="#dropping-tables" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="k">table_name</span>
+
+<span class="c1">-- if it has FOREIGN KEY, either update the depended tables or remove those tables as well</span>
+</code></pre></div>
+<h2 id="end">END<a class="headerlink" href="#end" title="Permanent link">&para;</a></h2>
+<p>The basics are covered above, if want to explore more, follow these.
+1. <a href="https://www.thoughtspot.com/sql-tutorial/sql-window-functions">Window Functions</a>****
+2. <a href="https://www.thoughtspot.com/sql-tutorial/sql-performance-tuning">Performance Tuning</a>
+3. <a href="https://www.thoughtspot.com/sql-tutorial/sql-pivot-table">Pivoting Data</a>
+4. <a href="https://www.thoughtspot.com/sql-tutorial/sql-business-analytics-training">Analytics</a></p>
+<h2 id="bigquery">BigQuery<a class="headerlink" href="#bigquery" title="Permanent link">&para;</a></h2>
+<p><a href="https://docs.cloud.google.com/bigquery/docs/">Docs</a></p>
+<h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span> <span class="k">as</span> <span class="n">bq</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span> <span class="c1"># centrol role in retrieving info from bigquery datasets</span>
+<span class="n">dataset_ref</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">dataset</span><span class="p">(</span><span class="s2">&quot;hacker_news&quot;</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="s2">&quot;bigquery-public-data&quot;</span><span class="p">)</span> <span class="c1"># arguments are dataset and the project where the data set is stored</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_dataset</span><span class="p">(</span><span class="n">dataset_ref</span><span class="p">)</span> <span class="c1"># fetching the database </span>
+<span class="c1"># this is only used for getting the info about the dataset and not the actual data in the dataset</span>
+
+<span class="n">tables</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">list_tables</span><span class="p">(</span><span class="n">dataset</span><span class="p">))</span> <span class="c1"># getting all the tables</span>
+<span class="k">for</span> <span class="n">table</span> <span class="ow">in</span> <span class="n">tables</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">table_id</span><span class="p">)</span> <span class="c1"># getting the name of the tables</span>
+
+<span class="n">table_ref</span> <span class="o">=</span> <span class="n">dataset_ref</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;Table_name&quot;</span><span class="p">)</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_table</span><span class="p">(</span><span class="n">table_ref</span><span class="p">)</span> <span class="c1"># to get a table</span>
+<span class="n">table</span><span class="o">.</span><span class="n">schema</span> <span class="c1"># to get schema</span>
+
+<span class="n">client</span><span class="o">.</span><span class="n">list_rows</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">max_result</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span> <span class="c1"># get the top 5 rows</span>
+<span class="c1"># bigquery library internally use pandas </span>
+
+<span class="n">client</span><span class="o">.</span><span class="n">list_rows</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> 
+    <span class="n">selected_fields</span><span class="o">=</span><span class="n">table</span><span class="o">.</span><span class="n">schema</span><span class="p">[:</span><span class="mi">1</span><span class="p">],</span> 
+    <span class="n">max_results</span><span class="o">=</span><span class="mi">5</span>
+<span class="p">)</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span> <span class="c1"># only first column</span>
+</code></pre></div>
+<blockquote>
+<div class="admonition note">
+<p class="admonition-title">Client</p>
+</div>
+<p>Go to server to run the query and get the data</p>
+<blockquote>
+<div class="admonition note">
+<p class="admonition-title">Project</p>
+</div>
+<p>Which holds the datasets</p>
+<blockquote>
+<div class="admonition note">
+<p class="admonition-title">Datasets</p>
+</div>
+<p>Which holds the tables</p>
+<blockquote>
+<div class="admonition note">
+<p class="admonition-title">Tables</p>
+</div>
+<p>Hold the actual data in rows and columns   </p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4 id="running-queries">Running Queries<a class="headerlink" href="#running-queries" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">google.cloud</span> <span class="kn">import</span> <span class="n">bigquery</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">bq</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    SQL STATEMENT/QUERY GOES HERE</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Date is the col name</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">SELECT col, EXTRACT(DAY from Date) </span>
+<span class="sd">FROM table_name</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="c1"># to only get a part of the date</span>
+
+
+<span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+
+<span class="c1"># to estimate the size of query without running it</span>
+<span class="n">dry_run_config</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">QueryJobConfig</span><span class="p">(</span><span class="n">dry_run</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dry_run_query_job</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">job_config</span><span class="o">=</span><span class="n">dry_run_config</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This query will process </span><span class="si">{}</span><span class="s2"> bytes.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dry_run_query_job</span><span class="o">.</span><span class="n">total_bytes_processed</span><span class="p">))</span>
+
+<span class="c1"># to limit the data we can scan </span>
+<span class="n">ONE_MB</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">*</span><span class="mi">1000</span>
+<span class="n">safe_config</span> <span class="o">=</span> <span class="n">bigquery</span><span class="o">.</span><span class="n">QueryJobConfig</span><span class="p">(</span><span class="n">maximum_bytes_billed</span><span class="o">=</span><span class="n">ONE_MB</span><span class="p">)</span>
+<span class="n">safe_query_job</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">job_config</span><span class="o">=</span><span class="n">safe_config</span><span class="p">)</span> <span class="c1"># will only run if its is less than 1 MB</span>
+<span class="n">safe_query_job</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span>
+</code></pre></div>
+<a href="https://docs.cloud.google.com/bigquery/docs/reference/legacy-sql#datetimefunctions">Date Docs</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instan", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
