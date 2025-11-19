@@ -1,0 +1,62 @@
+site_name: My Docs
+site_url: https://mydomain.org/mysite
+theme:
+  name: material
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+
+  features:
+    - navigation.instan
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
+    - navigation.top
+    - content.code.copy
+
+markdown_extensions:
+
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
