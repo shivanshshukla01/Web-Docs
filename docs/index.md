@@ -6,3 +6,4 @@ hide:
 - [Pandas](Pandas.md)
 - [Seaborn](Seaborn.md)
 - [SQL](SQL.md)
+- [BigQuery](BigQuery.md)

@@ -141,6 +141,7 @@ data.pop("key")
 
 ### Exception Handling
 **Bugs:** Mistake in code that does not stop the program from completion but leads to unwanted/unexpected or wrong result or behavior.
+
 **Exception:** Mistakes that interrupts the code from executing at the first encountered.
 
 ##### Some Exceptions
@@ -292,7 +293,7 @@ print(filtered_data) # [2, 4, 6]
 **\*\*kwargs:** allows to provide any number of arguments and they will be converted into the key-value pairs iterables.
 
 
-> [!NOTE] Remember
+> !!! NOTE "Remember"
 > args and kwargs are just terms, they are not static words, ***the main player here is \* and \*\* which is unpacking operator.*** 
 > It converts the unknown number of arguments into an iterable, either a ordered iterable(tuple) or key value pair iterable(dictionary)
 ****
@@ -335,7 +336,7 @@ decorator(some_func)
 # it is a good practice to have 'decorator' in the decorator function
 ```
 
-###### Perfect Example
+#### Perfect Example
 ```python
 def greet_decorator(func):
     def wrapper():
@@ -374,7 +375,8 @@ say_name()
 	- **You’re calling that specific wrapper instance.**
 
 - It prints "Hello!", runs the remembered `func()` (the original `say_name`), then prints "Goodbye!".
-###### Perfect Example (Stacked Decorators)
+
+#### Perfect Example (Stacked Decorators)
 ```python
 def outer_decorator(func):
     def outer_wrapper():
@@ -397,6 +399,7 @@ def main_task():
 
 main_task()
 ```
+
 - **Python defines** both decorators
     - `outer_decorator` and `inner_decorator` are just stored — no execution yet.
 
@@ -410,7 +413,9 @@ main_task()
     - `func` → original `main_task`.
     - Defines `inner_wrapper`.
     - Returns `inner_wrapper`.
-- NOW
+
+- **NOW**
+
 > `main_task = inner_wrapper` (a unique instance that remembers the original `main_task`).
 
 -  ⚙ Outer Decorator
@@ -418,10 +423,12 @@ main_task()
     - `func` → the `inner_wrapper` (returned from previous step).
     - Defines `outer_wrapper`.
     - Returns `outer_wrapper`.
-- Now:  
+
+- **Now:** 
+
 > `main_task = outer_wrapper`.  
 
-▶ When `main_task()` is called:
+- When `main_task()` is called:
 - Python calls `outer_wrapper()`
     - Prints `>>> Entering outer layer`
     - Calls `func()` → that’s `inner_wrapper`
@@ -460,7 +467,7 @@ print(object_var.attribute_1)
 object_var.some_function()
 ```
 
-###### Functions vs Methods
+#### Functions vs Methods
 **Functions** are independent and can be called on their own but **Methods** can only be called via an instance of that class in which the method is defined.
 
 #### Inheritance, Polymorphism and Encapsulation
@@ -651,11 +658,11 @@ Reading is: 15000
 {'model': 'BMW', 'year': 2000, '_Car__odometer': 15000, 'odometer': 20000, '__odometer': 20000}
 ```
 
-The Encapsulation via \_ and \_\_ can also be used with methods of the class.
+The Encapsulation via \_ and \_ \_ can also be used with methods of the class.
 Protected can be used only by the Superclass and Subclass and Private can be used only within Superclass.
 
 #### Class and Static Methods
-###### @classmethod
+##### @classmethod
 ```python
 class Car:
     wheels = 4  # class attribute
@@ -681,7 +688,7 @@ print(Car.wheels)      # 6
 print(c1.wheels)       # 6 (all instances see updated value)
 
 ```
-###### @staticmethod
+##### @staticmethod
 ```python
 class Car:
     wheels = 4

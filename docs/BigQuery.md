@@ -2,7 +2,6 @@
 hide:
   - navigation
 ---
-## BigQuery
 [Docs](https://docs.cloud.google.com/bigquery/docs/)
 #### Introduction
 ```python

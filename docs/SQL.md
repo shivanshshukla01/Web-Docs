@@ -114,6 +114,7 @@ WHERE condition(s)
 
 #### Outer Join
 Asymmetric data - use LEFT, RIGHT or FULL JOIN, (OUTER can be omitted)
+
 <u>Left Join:</u> returns all rows of left table A whether is match is found in right table B or not
 - The table with more DISTINCT rows should be considered as A, hence used with FROM
 - The table whose row you want to preserve should be considered as A or left table
@@ -124,6 +125,7 @@ ON table_1.col = table_2.col
 --    left         right
 ```
 <u>Right Join:</u> same as above but reversed, include rows of right table regardless of match found in left table
+
 <u>Full Join:</u> rows for both tables are kept, regardless of matching row exist or not
 ```sql
 SELECT col, col2
@@ -224,7 +226,7 @@ year, month, day, hour, minute, second, decade, dow
 */
 COALESCE(col, 'string') -- replace the null values with string
 ```
-##### CTE (Common Table Expression)
+### CTE (Common Table Expression)
 CTE - temporary table returned within a query, helps in splitting queries into readable chunks
 ```sql
 WITH temp_table_name AS
@@ -235,7 +237,7 @@ WHERE condition
 SELECT col2 FROM temp_table_name
 ```
 
-##### Current Data/Time Methods
+### Current Data/Time Methods
 ```sql
 SELECT CURRENT_DATE AS date,
        CURRENT_TIME AS time,
@@ -297,7 +299,7 @@ col2_name datatype TableConstraint DEFAULT defauly_vaue
 -- TableConstraint is applied on the value inserted into the col
 ```
 
-##### Table Data Types
+### Table Data Types
 
 | Data Type                         | Description                                                                                                                                                                                                                           |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -308,7 +310,7 @@ col2_name datatype TableConstraint DEFAULT defauly_vaue
 | DATE, DATETIME                    | no explanation needed                                                                                                                                                                                                                 |
 | BLOB                              | Binary data, must store with right metadata for requery                                                                                                                                                                               |
 
-##### Table Constraints
+### Table Constraints
 
 | CONSTRAINTS                                                                                                                           | Description                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
@@ -317,7 +319,7 @@ col2_name datatype TableConstraint DEFAULT defauly_vaue
 | UNIQUE                                                                                                                                | cannot have duplic                                          |
 | NOT NULL                                                                                                                              | cannot be NULL or                                           |
 | CHECK(exp)                                                                                                                            | check whether the value inserted is valid o                 |
-| FOREIGN  Consistency check means each value in the col ensures it corresponds to another value in another col in another table nother |                                                             |
+| FOREIGN                                                                                                                               |  Consistency check means each value in the col ensures it corresponds to another value in another col in another table                                                            |
 
 ## Altering Tables
 ```sql

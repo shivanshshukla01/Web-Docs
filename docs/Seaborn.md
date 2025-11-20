@@ -11,7 +11,9 @@ hide:
 - `plt.xlable("x axis label")`
 - `sns.barplot(x=df[col] or df.index, y=df[col])` 
 - `sns.heatmap(data=df, annot=True)`
+
 **Scatter Plots**
+
 - `sns.scatterplot(x=df[col], y=df[col])` 
 - `sns.regplot(x=df[col], y=df[col])` 
 	- Regression line, the line that best fits the data
@@ -28,6 +30,7 @@ hide:
 	- 2D KDE plot
 
 **Choosing the charts**
+
 - <u>Trends</u> - change in pattern
     - `sns.lineplot` - best to show trend over time
 - <u>Relationship</u> - relationships between variables
@@ -43,6 +46,7 @@ hide:
     - `sns.jointplot` -  simultaneously displaying a 2D KDE plot with corresponding KDE plots for each individual variable.
 
 **Styling**
+
 - `sns.set_style('style')` - available styles are 
 	- darkgrid
 	- whitegrid
