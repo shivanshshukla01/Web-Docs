@@ -1,5 +1,6 @@
-site_name: My Docs
+site_name: My Notes
 site_url: https://shivanshshukla01.github.io/Web-Docs/
+
 theme:
   name: material
   palette: 
@@ -15,9 +16,8 @@ theme:
         icon: material/weather-night
         name: Switch to light mode
 
-
   features:
-    - navigation.instan
+    - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
     - navigation.tracking
@@ -28,7 +28,6 @@ theme:
     - content.code.copy
 
 markdown_extensions:
-
   # Python Markdown
   - abbr
   - admonition
@@ -60,3 +59,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+plugins:
+  - search
+  - open-in-new-tab

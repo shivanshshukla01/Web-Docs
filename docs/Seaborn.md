@@ -1,3 +1,7 @@
+---
+hide:
+  - navigation
+---
 - `plt.figure(figsize=(x,y))` - set the width, height of the chart
 - `sns.lineplot(data=dataframe)`
 - `plt.title("title")`

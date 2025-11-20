@@ -1,4 +1,7 @@
-# Python
+---
+hide:
+  - navigation
+---
 ### Strings
 ```python
 string = "Pluto is a planel!"

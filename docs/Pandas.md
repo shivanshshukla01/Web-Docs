@@ -1,3 +1,7 @@
+---
+hide:
+  - navigation
+---
 ### Handy Stuff
 - `df.col.idxmax()` - index of the first occurrence of max value in col
 - `df[col].str.lower().str.count(word)` return the occurrence of the word in the values of col - almost instant
