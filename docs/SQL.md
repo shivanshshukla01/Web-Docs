@@ -29,7 +29,7 @@ SELECT *
 FROM table_name
 WHERE col = 'something' -- case-sensitive equality
 col != 'something' -- case-sensitive equality
-col LIKE 'something' -- pattern matching or case-insensitive equality
+col LIKE 'something' -- pattern matching or case-sensitive equality
 -- ILIKE is used for case-insensitive where LIKE is case-sensitive
 col NOT LIKE 'something' -- pattern matching inequality 
 -- wildcards are % - means any num of character and _ means only one character
@@ -37,7 +37,7 @@ col LIKE '%some%' -- any word with some in between
 -- handsomeness
 col LIKE 'some%' -- start with some and end with anything
 -- someplace
-col LIKE 'an_' -- start with any single letter and then some
+col LIKE 'an_' -- start with an and then a single character
 -- and, ant
 ```
 full text search ? - Apache Lucene or Sphinx - dedicated external for long full text search
@@ -53,11 +53,13 @@ FROM table_name
 
 SELECT col, col2
 FROM table_name
-WHERE condition --no necessary
+WHERE condition --not necessary
 ORDER BY col ASC -- or DESC
 LIMIT num -- reduce the number of rows to return
 OFFSET num -- how many rows to skip - OPTIONAL
 -- LIMIT and OFFSET are majorly used/written at the end of the statement/query
+
+
 
 -- when comparing date and time with the timestamp or date data, this is a better way
 WHERE timestamp_data > 'date' -- '2010-01-01'
@@ -65,38 +67,45 @@ WHERE timestamp_data > 'date' -- '2010-01-01'
 
 #### CASE - if/then logic in SQL
 ```sql
-SELECT col, col2, col3
-CASE WHEN col = 'value' THEN 'value_2'
+SELECT col, col2, col3, -- this comma is important else SYNTAX ERROR
+CASE 
+  WHEN col = 'value' THEN 'value_2'
 	WHEN col2 = 'value2' THEN 'val2' -- multiple conditions can be used as well
-ELSE NULL/'Value'
+  ELSE NULL/'Value'
+END AS column_name -- the column name where the THEN values will be displayed
 FROM table_name
 ```
 ***<u>IRL example</u>***
 ```sql
-SELECT player_name,
-       year,
-       CASE WHEN year = 'SR' THEN 'yes'
-            ELSE NULL END AS is_a_senior
-  FROM benn.college_football_players
+SELECT player_name, year,
+CASE 
+	WHEN year = 'SR' THEN 'yes'
+	ELSE NULL 
+END AS is_a_senior
+FROM benn.college_football_players
 
 -- CAN also use multiple statements
-SELECT player_name,
-       weight,
-       CASE WHEN weight > 250 THEN 'over 250'
-            WHEN weight > 200 AND weight <= 250 THEN '201-250'
-            WHEN weight > 175 AND weight <= 200 THEN '176-200'
-            ELSE '175 or under' END AS weight_group
-  FROM benn.college_football_players
+SELECT player_name, weight,
+CASE 
+	WHEN weight > 250 THEN 'over 250'
+	WHEN weight > 200 AND weight <= 250 THEN '201-250'
+	WHEN weight > 175 AND weight <= 200 THEN '176-200'
+	ELSE '175 or under' 
+END AS weight_group
+FROM benn.college_football_players
   
 -- CAN also be used with aggregate functions
-SELECT CASE WHEN year = 'FR' THEN 'FR'
-            WHEN year = 'SO' THEN 'SO'
-            WHEN year = 'JR' THEN 'JR'
-            WHEN year = 'SR' THEN 'SR'
-            ELSE 'No Year Data' END AS year_group,
-            COUNT(1) AS count
-  FROM benn.college_football_players
- GROUP BY year_group
+SELECT 
+CASE 
+	WHEN year = 'FR' THEN 'FR'
+	WHEN year = 'SO' THEN 'SO'
+	WHEN year = 'JR' THEN 'JR'
+	WHEN year = 'SR' THEN 'SR'
+	ELSE 'No Year Data' 
+END AS year_group,
+COUNT(1) AS count
+FROM benn.college_football_players
+GROUP BY year_group
 ```
 
 ### Multi Table Queries - JOINS
